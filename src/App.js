@@ -17,7 +17,7 @@ const App = () => {
 
     useEffect(() => {
         alanBtn({
-            key: alanKey,
+            key: process.env.ALAN_KEY,
             onCommand: ({ command, articles, number }) => {
                 if(command === 'newHeadlines') {
                     setNewsArticles(articles);
